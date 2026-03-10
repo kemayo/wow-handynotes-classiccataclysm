@@ -16,7 +16,8 @@ handler\handler.xml
 
 glue.lua
 
-mainline.lua [AllowLoadGameType mainline]
+mainline.lua [AllowLoadGameType mainline, mists]
 
 classic.lua [AllowLoadGameType vanilla, tbc, wrath]
-classic_cataclysm.lua [AllowLoadGameType cata, mists]
+# this was the cataclysm prepatch changes after the world was rearranged but before the new zones were available:
+classic_cataclysm.lua [AllowLoadGameType cata]
