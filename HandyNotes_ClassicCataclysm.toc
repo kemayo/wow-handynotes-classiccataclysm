@@ -1,0 +1,22 @@
+## Interface: 120001, 50503, 30405, 20505, 11508
+## Title: HandyNotes: Classic and Cataclysm
+## Notes: Where are the hidden treasures in the pre-and-post Cataclysm Classic zones?
+## Author: Kemayo
+## Version: @project-version@
+## IconTexture: Interface\Icons\Ability_Spy
+## DefaultState: enabled
+## X-Category: Map
+## X-eMail: kemayo @ gmail DOT com
+## X-Curse-Project-ID: 
+## X-Wago-ID: 
+## SavedVariables: HandyNotes_ClassicCataclysmDB
+## RequiredDeps: HandyNotes
+
+handler\handler.xml
+
+glue.lua
+
+mainline.lua [AllowLoadGameType mainline]
+
+classic.lua [AllowLoadGameType vanilla, tbc, wrath]
+classic_cataclysm.lua [AllowLoadGameType cata, mists]
