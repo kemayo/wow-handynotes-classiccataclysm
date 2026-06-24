@@ -609,3 +609,429 @@ ns.ImportSilverDragonData({
 	[56080] = {name="Little Samras",locations={[274]={64204360},},hidden=true,},
 	[56081] = {name="Optimistic Benj",locations={[274]={48206460},},hidden=true,},
 })
+
+-- Flight masters
+if WOW_PROJECT_ID ~= WOW_PROJECT_MAINLINE then
+	local faction = UnitFactionGroup("player")
+	local FM = ns.nodeMaker{
+		label=MINIMAP_TRACKING_FLIGHTMASTER, -- Flight Master
+		group=TUTORIAL_TITLE35, -- Travel
+		atlas="FlightMaster",
+	}
+	local FLIGHTMASTER = FM{}
+
+	ns.RegisterPoints(201, { -- Kelp'thar Forest
+		[56203100] = {note="{npc:40852}"}, -- Swift Seahorse
+	}, FM{parent=true})
+	ns.RegisterPoints(205, { -- Shimmering Expanse
+		[49404120] = {note="{npc:40851}"}, -- Swift Seahorse
+	}, FM{parent=true})
+
+	if faction == "Alliance" then
+		ns.RegisterPoints(84, { -- Stormwind City
+			[71007240] = {note="{npc:352}"}, -- Dungar Longdrink
+		}, FM{translate={[37]=true}})
+		ns.RegisterPoints(87, { -- Ironforge
+			[55404740] = {note="{npc:1573}"}, -- Gryth Thurden
+		}, FM{translate={[27]=true}})
+		ns.RegisterPoints(89, { -- Darnassus
+			[36604800] = {note="{npc:40552}"}, -- Leora
+		}, FM{translate={[57]=true}})
+		ns.RegisterPoints(37, { -- Elwynn Forest
+			[41806460] = {note="{npc:42983}"}, -- Bartlett the Brave
+			[81806640] = {note="{npc:43000}"}, -- Goss the Swift
+		}, FLIGHTMASTER)
+		ns.RegisterPoints(27, { -- Dun Morogh
+			[53805260] = {note="{npc:43701}"}, -- Brolan Galebeard
+			[75805440] = {note="{npc:43702}"}, -- Dominic Galebeard
+		}, FLIGHTMASTER)
+		ns.RegisterPoints(57, { -- Teldrassil
+			[55405040] = {note="{npc:40553}"}, -- Fidelio
+		}, FLIGHTMASTER)
+		ns.RegisterPoints(69, { -- Feralas
+			[30204320] = {note="{npc:8019}"}, -- Fyldren Moonfeather
+			[57005400] = {note="{npc:41580}"}, -- Aryenda
+			[46804520] = {note="{npc:41383}"}, -- Irela Moonfeather
+			[50201660] = {note="{npc:40966}"}, -- Selor
+		}, FLIGHTMASTER)
+		ns.RegisterPoints(63, { -- Ashenvale
+			[18002040] = {note="{npc:34374}"}, -- Solais
+			[34404800] = {note="{npc:4267}"}, -- Daelyshia
+			[35007200] = {note="{npc:34378}"}, -- Myre Moonglide
+		}, FLIGHTMASTER)
+		ns.RegisterPoints(71, { -- Tanaris
+			[51002920] = {note="{npc:7823}"}, -- Bera Stonehammer
+			[40007740] = {note="{npc:40827}"}, -- Thurda
+		}, FLIGHTMASTER)
+		ns.RegisterPoints(77, { -- Felwood
+			[43602860] = {note="{npc:43073}"}, -- Hanah Southsong
+			[44206180] = {note="{npc:43079}"}, -- Chyella Hushglade
+			[51408080] = {note="{npc:22931}"}, -- Gorrim
+			[62402420] = {note="{npc:12578}"}, -- Mishellena
+		}, FLIGHTMASTER)
+		ns.RegisterPoints(50, { -- Northern Stranglethorn
+			[38200400] = {note="{npc:24366}"}, -- Nizzle
+			[27407780] = {note="{npc:2859}"}, -- Gyll
+			[52606620] = {note="{npc:43042}"}, -- Robert Rhodes
+			[47801180] = {note="{npc:43045}"}, -- James Stillair
+		}, FLIGHTMASTER)
+		ns.RegisterPoints(22, { -- Western Plaguelands
+			[44601840] = {note="{npc:47875}"}, -- William Henderson
+			[42808500] = {note="{npc:12596}"}, -- Bibilfaz Featherwhistle
+			[69204960] = {note="{npc:37888}"}, -- Frax Bucketdrop
+			[39406940] = {note="{npc:46006}"}, -- Ginny Goodwin
+			[50405220] = {note="{npc:46011}"}, -- Marge Heffman
+		}, FLIGHTMASTER)
+		ns.RegisterPoints(210, { -- The Cape of Stranglethorn
+			[55604120] = {note="{npc:43043}"}, -- Colin Swifthammer
+			[41607440] = {note="{npc:2859}"}, -- Gyll
+		}, FLIGHTMASTER)
+		ns.RegisterPoints(32, { -- Searing Gorge
+			[41006840] = {note="{npc:47927}"}, -- Doug Deepdown
+			[37803040] = {note="{npc:2941}"}, -- Lanie Reed
+		}, FLIGHTMASTER)
+		ns.RegisterPoints(36, { -- Burning Steppes
+			[17605260] = {note="{npc:48318}"}, -- Hans Oreflight
+			[72006540] = {note="{npc:2299}"}, -- Borgus Stoutarm
+			[46004180] = {note="{npc:48321}"}, -- Grimly Singefeather
+		}, FLIGHTMASTER)
+		ns.RegisterPoints(199, { -- Southern Barrens
+			[38801080] = {note="{npc:39210}"}, -- John Johnson
+			[66404720] = {note="{npc:39212}"}, -- Bill Williamson
+		}, FLIGHTMASTER)
+		ns.RegisterPoints(80, { -- Moonglade
+			[48006720] = {note="{npc:10897}"}, -- Sindrayl
+		}, FLIGHTMASTER)
+		ns.RegisterPoints(52, { -- Westfall
+			[56405260] = {note="{npc:523}"}, -- Thor
+			[49801880] = {note="{npc:42406}"}, -- Hoboair
+		}, FLIGHTMASTER)
+		ns.RegisterPoints(64, { -- Thousand Needles
+			[79007180] = {note="{npc:40768}"}, -- Tilly Topspin
+		}, FLIGHTMASTER)
+		ns.RegisterPoints(26, { -- The Hinterlands
+			[65604480] = {note="{npc:43570}"}, -- Brock Rockbeard
+			[11004600] = {note="{npc:8018}"}, -- Guthrum Thunderfist
+		}, FLIGHTMASTER)
+		ns.RegisterPoints(56, { -- Wetlands
+			[50001840] = {note="{npc:41325}"}, -- Caleb Baelor
+			[38603900] = {note="{npc:41323}"}, -- Damon Baelor
+			[56807120] = {note="{npc:41321}"}, -- Elgin Baelor
+			[56404180] = {note="{npc:41322}"}, -- Halana
+		}, FLIGHTMASTER)
+		ns.RegisterPoints(65, { -- Stonetalon Mountains
+			[48605140] = {note="{npc:41240}"}, -- Fiora Moonsoar
+			[58805420] = {note="{npc:35137}"}, -- Allana Swiftglide
+			[32006180] = {note="{npc:35138}"}, -- Ceyora
+			[70808040] = {note="{npc:35136}"}, -- Kaluna Songflight
+		}, FLIGHTMASTER)
+		ns.RegisterPoints(15, { -- Badlands
+			[21605760] = {note="{npc:44410}"}, -- Jake Badlands
+			[64203520] = {note="{npc:44407}"}, -- Mixi Sweetride
+			[48803620] = {note="{npc:44409}"}, -- Nancy Skybrew
+		}, FLIGHTMASTER)
+		ns.RegisterPoints(23, { -- Eastern Plaguelands
+			[34806800] = {note="{npc:44232}"}, -- Janice Myers
+			[75805340] = {note="{npc:12617}"}, -- Khaelyn Steelwing
+			[52805340] = {note="{npc:44231}"}, -- Devon Manning
+			[10006580] = {note="{npc:37888}"}, -- Frax Bucketdrop
+			[51202120] = {note="{npc:28621}"}, -- Grayson Ironwing
+			[83805020] = {note="{npc:29480}"}, -- Grimwing
+			[61604380] = {note="{npc:44230}"}, -- Richard Trueflight
+		}, FLIGHTMASTER)
+		ns.RegisterPoints(66, { -- Desolace
+			[57604960] = {note="{npc:35478}"}, -- Lastrea Greengale
+			[70403280] = {note="{npc:35556}"}, -- Thunk's Wyvern
+			[64601040] = {note="{npc:6706}"}, -- Baritanas Skyriver
+			[39002700] = {note="{npc:35562}"}, -- Korrah's Hippogryph
+			[36807140] = {note="{npc:35481}"}, -- Moira Steelwing
+		}, FLIGHTMASTER)
+		ns.RegisterPoints(83, { -- Winterspring
+			[62203660] = {note="{npc:11138}"}, -- Maethrya
+		}, FLIGHTMASTER)
+		ns.RegisterPoints(49, { -- Redridge Mountains
+			[77806580] = {note="{npc:43072}"}, -- Nora Baldwin
+			[30605940] = {note="{npc:931}"}, -- Ariena Stormfeather
+			[52805440] = {note="{npc:43371}"}, -- Arlen Marsters
+		}, FLIGHTMASTER)
+		ns.RegisterPoints(51, { -- Swamp of Sorrows
+			[72001200] = {note="{npc:43086}"}, -- Skeezie
+			[70003840] = {note="{npc:43087}"}, -- Paola Baldwin
+		}, FLIGHTMASTER)
+		ns.RegisterPoints(17, { -- Blasted Lands
+			[61202160] = {note="{npc:8609}"}, -- Alexandra Constantine
+			[47008920] = {note="{npc:43107}"}, -- Graham McAllister
+		}, FLIGHTMASTER)
+		ns.RegisterPoints(70, { -- Dustwallow Marsh
+			[67405120] = {note="{npc:4321}"}, -- Baldruc
+			[42807240] = {note="{npc:40358}"}, -- Dyslix Silvergrub
+		}, FLIGHTMASTER)
+		ns.RegisterPoints(10, { -- Northern Barrens
+			[63003720] = {note="{npc:16227}"}, -- Bragok
+		}, FLIGHTMASTER)
+		ns.RegisterPoints(14, { -- Arathi Highlands
+			[39804740] = {note="{npc:2835}"}, -- Cedrik Prose
+		}, FLIGHTMASTER)
+		ns.RegisterPoints(81, { -- Silithus
+			[50603440] = {note="{npc:15177}"}, -- Cloud Skydancer
+		}, FLIGHTMASTER)
+		ns.RegisterPoints(25, { -- Hillsbrad Foothills
+			[49405220] = {note="{npc:2432}"}, -- Darla Harris
+		}, FLIGHTMASTER)
+		ns.RegisterPoints(62, { -- Darkshore
+			[44407540] = {note="{npc:33253}"}, -- Delanea
+		}, FLIGHTMASTER)
+		ns.RegisterPoints(48, { -- Loch Modan
+			[81806420] = {note="{npc:41332}"}, -- Eeryven Grayer
+		}, FLIGHTMASTER)
+		ns.RegisterPoints(47, { -- Duskwood
+			[77404440] = {note="{npc:2409}"}, -- Felicia Maline
+			[21005640] = {note="{npc:43697}"}, -- John Shelby
+		}, FLIGHTMASTER)
+		ns.RegisterPoints(78, { -- Un'Goro Crater
+			[44004020] = {note="{npc:39175}"}, -- Flizzy Coilspanner
+			[45200580] = {note="{npc:10583}"}, -- Gryfe
+		}, FLIGHTMASTER)
+		ns.RegisterPoints(241, { -- Twilight Highlands
+			[43805720] = {note="{npc:47118}"}, -- Desmond Chadsworth
+			[56601520] = {note="{npc:47155}"}, -- Shaina Talonheart
+			[28402480] = {note="{npc:47121}"}, -- Aquinastrasz
+			[48402820] = {note="{npc:47154}"}, -- Doran Talonheart
+			[60405760] = {note="{npc:47147}"}, -- Farstad Stonegrip
+			[81607700] = {note="{npc:47119}"}, -- Glenn Arbuckle
+		}, FLIGHTMASTER)
+		ns.RegisterPoints(198, { -- Mount Hyjal
+			[19403640] = {note="{npc:53783}"}, -- Elizil Wintermoth
+			-- [19403640] = {note="{npc:41860}"}, -- Elizil Wintermoth
+			[62202140] = {note="{npc:41861}"}, -- Fayran Elthas
+			[71607520] = {note="{npc:43549}"}, -- Althera
+			[41204240] = {note="{npc:43481}"}, -- Dinorae Swiftfeather
+			-- [41204260] = {note="{npc:50084}"}, -- Dinorae Swiftfeather
+			[27606340] = {note="{npc:54392}"}, -- Ranela Featherglen
+			-- [27806340] = {note="{npc:54393}"}, -- Ranela Featherglen
+		}, FLIGHTMASTER)
+		ns.RegisterPoints(249, { -- Uldum
+			[22206480] = {note="{npc:48273}"}, -- Evax Oilspark
+			[26600820] = {note="{npc:48274}"}, -- Jock Lindsey
+			[56203360] = {note="{npc:48275}"}, -- Kurzel
+		}, FLIGHTMASTER)
+		ns.RegisterPoints(201, { -- Kelp'thar Forest
+			[42606620] = {note="{npc:43287}"}, -- Swift Seahorse
+		}, FM{parent=true})
+		ns.RegisterPoints(204, { -- Abyssal Depths
+			[57007560] = {note="{npc:40873}"}, -- Swift Seahorse
+		}, FM{parent=true})
+		ns.RegisterPoints(205, { -- Shimmering Expanse
+			[56807580] = {note="{npc:43295}, on boat"}, -- Salty McTavish
+			[57007520] = {note="{npc:43289}"}, -- Swift Seahorse
+			[57001700] = {note="{npc:43290}, on surface"}, -- Francis Greene
+			[48405740] = {note="{npc:40867}"}, -- Swift Seahorse
+		}, FM{parent=true})
+	elseif faction == "Horde" then
+		ns.RegisterPoints(86, { -- Orgrimmar
+			[45206380] = {note="{npc:3310}"}, -- Doras
+		}, FM{translate={[1]=true}})
+		ns.RegisterPoints(1, { -- Durotar
+			[53004340] = {note="{npc:41140}"}, -- Burok
+			[55407340] = {note="{npc:41142}"}, -- Handler Marnlek
+		}, FLIGHTMASTER)
+		ns.RegisterPoints(88, { -- Thunder Bluff
+			[46805000] = {note="{npc:2995}"}, -- Tal
+		}, FM{translate={[7]=true}})
+		ns.RegisterPoints(7, { -- Mulgore
+			[47405840] = {note="{npc:40809}"}, -- Tak
+		}, FLIGHTMASTER)
+		ns.RegisterPoints(90, { -- Undercity
+			[63404840] = {note="{npc:4551}"}, -- Michael Garrett
+		}, FM{translate={[18]=true}})
+		ns.RegisterPoints(18, { -- Tirisfal Glades
+			[58805180] = {note="{npc:43124}"}, -- Anette Williams
+			[83407000] = {note="{npc:37915}"}, -- Timothy Cunningham
+		}, FLIGHTMASTER)
+
+		ns.RegisterPoints(199, { -- Southern Barrens
+			[39602020] = {note="{npc:39340}"}, -- Unega
+			[41207080] = {note="{npc:39330}"}, -- Crador
+			[41404760] = {note="{npc:52060}"}, -- Lognah
+		}, FLIGHTMASTER)
+		ns.RegisterPoints(69, { -- Feralas
+			[75404420] = {note="{npc:39898}"}, -- Shyn
+			[51004840] = {note="{npc:41605}"}, -- Mergek
+			[41401540] = {note="{npc:40473}"}, -- Tono
+		}, FLIGHTMASTER)
+		ns.RegisterPoints(64, { -- Thousand Needles
+			[45004920] = {note="{npc:4317}"}, -- Nyse
+			[11001160] = {note="{npc:44399}"}, -- Nah'te
+			[79007180] = {note="{npc:40768}"}, -- Tilly Topspin
+			[79007180] = {note="{npc:40769}"}, -- Zazzix Boomride
+		}, FLIGHTMASTER)
+		ns.RegisterPoints(50, { -- Northern Stranglethorn
+			[26807700] = {note="{npc:2858}"}, -- Gringer
+			[32402920] = {note="{npc:1387}"}, -- Thysta
+			[62403920] = {note="{npc:43052}"}, -- Raskha
+		}, FLIGHTMASTER)
+		ns.RegisterPoints(77, { -- Felwood
+			[43602860] = {note="{npc:43073}"}, -- Hanah Southsong
+			[44206180] = {note="{npc:43079}"}, -- Chyella Hushglade
+			[51408080] = {note="{npc:22931}"}, -- Gorrim
+			[34405380] = {note="{npc:11900}"}, -- Brakkar
+			[56200860] = {note="{npc:43085}"}, -- Dirzak Pryocrank
+		}, FLIGHTMASTER)
+		ns.RegisterPoints(65, { -- Stonetalon Mountains
+			[66406280] = {note="{npc:35140}"}, -- Kormal the Swift
+			[53804000] = {note="{npc:41246}"}, -- Flok
+			[48406200] = {note="{npc:4312}"}, -- Tharm
+			[45003080] = {note="{npc:35141}"}, -- Orna Skywatcher
+			[70408940] = {note="{npc:35139}"}, -- Zillane
+		}, FLIGHTMASTER)
+		ns.RegisterPoints(25, { -- Hillsbrad Foothills
+			[29006440] = {note="{npc:47655}"}, -- Pamela Stutzka
+			[49006620] = {note="{npc:47644}"}, -- Darla Harris
+			[59606320] = {note="{npc:47661}"}, -- Darren Longfellow
+			[58202640] = {note="{npc:47665}"}, -- Phillip Harding
+			[60201860] = {note="{npc:2389}"}, -- Zarise
+		}, FLIGHTMASTER)
+		ns.RegisterPoints(22, { -- Western Plaguelands
+			[44601840] = {note="{npc:47875}"}, -- William Henderson
+			[46406460] = {note="{npc:46004}"}, -- Rhonda Molver
+			[69204960] = {note="{npc:37888}"}, -- Frax Bucketdrop
+			[50405220] = {note="{npc:46011}"}, -- Marge Heffman
+		}, FLIGHTMASTER)
+		ns.RegisterPoints(32, { -- Searing Gorge
+			[41006840] = {note="{npc:47927}"}, -- Doug Deepdown
+			[34803040] = {note="{npc:3305}"}, -- Grisha
+		}, FLIGHTMASTER)
+		ns.RegisterPoints(36, { -- Burning Steppes
+			[17605260] = {note="{npc:48318}"}, -- Hans Oreflight
+			[46004180] = {note="{npc:48321}"}, -- Grimly Singefeather
+			[65602420] = {note="{npc:13177}"}, -- Vahgruk
+		}, FLIGHTMASTER)
+		ns.RegisterPoints(71, { -- Tanaris
+			[33207720] = {note="{npc:41215}"}, -- Raina Sunglide
+			[51602540] = {note="{npc:7824}"}, -- Bulkrek Ragefist
+			[55806040] = {note="{npc:41214}"}, -- Slick Dropdip
+		}, FLIGHTMASTER)
+		ns.RegisterPoints(17, { -- Blasted Lands
+			[50807280] = {note="{npc:43114}"}, -- Salena
+			[43601420] = {note="{npc:43121}"}, -- Preda
+		}, FLIGHTMASTER)
+		ns.RegisterPoints(15, { -- Badlands
+			[52405080] = {note="{npc:44408}"}, -- Selara
+			[4004480] = {note="{npc:2861}"}, -- Gorrik
+			[64203520] = {note="{npc:44407}"}, -- Mixi Sweetride
+		}, FLIGHTMASTER)
+		ns.RegisterPoints(63, { -- Ashenvale
+			[38004220] = {note="{npc:34429}"}, -- Thraka
+			[73206140] = {note="{npc:12616}"}, -- Vhulgra
+			[11203440] = {note="{npc:11901}"}, -- Andruk
+			[49206520] = {note="{npc:34943}"}, -- Wind Tamer Shoshok
+		}, FLIGHTMASTER)
+		ns.RegisterPoints(76, { -- Azshara
+			[66402100] = {note="{npc:43328}"}, -- Blitz Blastospazz
+			[51407420] = {note="{npc:37005}"}, -- Friz Groundspin
+			[22004960] = {note="{npc:8610}"}, -- Kroum
+			[14206500] = {note="{npc:36728}"}, -- Kroum
+		}, FLIGHTMASTER)
+		ns.RegisterPoints(51, { -- Swamp of Sorrows
+			[46005460] = {note="{npc:6026}"}, -- Breyk
+			[72001200] = {note="{npc:43086}"}, -- Skeezie
+		}, FLIGHTMASTER)
+		ns.RegisterPoints(10, { -- Northern Barrens
+			[51403020] = {note="{npc:3615}"}, -- Devrak
+			[63003720] = {note="{npc:16227}"}, -- Bragok
+			[62401720] = {note="{npc:40558}"}, -- Gazrix
+			[42001580] = {note="{npc:34927}"}, -- Gort Goreflight
+			[44405900] = {note="{npc:10378}"}, -- Omusa Thunderhorn
+		}, FLIGHTMASTER)
+		ns.RegisterPoints(23, { -- Eastern Plaguelands
+			[74405120] = {note="{npc:12636}"}, -- Georgia
+			[34806800] = {note="{npc:44232}"}, -- Janice Myers
+			[75805340] = {note="{npc:12617}"}, -- Khaelyn Steelwing
+			[52805340] = {note="{npc:44231}"}, -- Devon Manning
+			[10006580] = {note="{npc:37888}"}, -- Frax Bucketdrop
+			[51202120] = {note="{npc:28621}"}, -- Grayson Ironwing
+			[83805020] = {note="{npc:29480}"}, -- Grimwing
+			[61604380] = {note="{npc:44230}"}, -- Richard Trueflight
+			[18402740] = {note="{npc:44233}"}, -- William Kielar Jr.
+		}, FLIGHTMASTER)
+		ns.RegisterPoints(26, { -- The Hinterlands
+			[81608180] = {note="{npc:4314}"}, -- Gorkas
+			[32405800] = {note="{npc:43573}"}, -- Kellen Kuhn
+		}, FLIGHTMASTER)
+		ns.RegisterPoints(210, { -- The Cape of Stranglethorn
+			[35002920] = {note="{npc:43053}"}, -- Hizzle
+		}, FLIGHTMASTER)
+		ns.RegisterPoints(66, { -- Desolace
+			[57604960] = {note="{npc:35478}"}, -- Lastrea Greengale
+			[70403280] = {note="{npc:35556}"}, -- Thunk's Wyvern
+			[39002700] = {note="{npc:35562}"}, -- Korrah's Hippogryph
+			[44202960] = {note="{npc:35315}"}, -- Narimar
+			[21607400] = {note="{npc:6726}"}, -- Thalon
+		}, FLIGHTMASTER)
+		ns.RegisterPoints(70, { -- Dustwallow Marsh
+			[35403180] = {note="{npc:11899}"}, -- Shardi
+			[42807240] = {note="{npc:40358}"}, -- Dyslix Silvergrub
+		}, FLIGHTMASTER)
+		ns.RegisterPoints(14, { -- Arathi Highlands
+			[73003260] = {note="{npc:2851}"}, -- Urda
+			[13403480] = {note="{npc:43104}"}, -- Rhoda Bowers
+		}, FLIGHTMASTER)
+		ns.RegisterPoints(83, { -- Winterspring
+			[58804820] = {note="{npc:11139}"}, -- Yugrek
+		}, FLIGHTMASTER)
+		ns.RegisterPoints(217, { -- Ruins of Gilneas
+			[57201780] = {note="{npc:45479}"}, -- Bat Handler Doomair
+		}, FLIGHTMASTER)
+		ns.RegisterPoints(21, { -- Silverpine Forest
+			[57800880] = {note="{npc:44825}"}, -- Bat Handler Maggotbreath
+			[46002180] = {note="{npc:50463}"}, -- Franny Mertz
+			[45404240] = {note="{npc:2226}"}, -- Karos Razok
+			[50806340] = {note="{npc:46552}"}, -- Steven Stutzka
+		}, FLIGHTMASTER)
+		ns.RegisterPoints(80, { -- Moonglade
+			[32206640] = {note="{npc:12740}"}, -- Faustron
+		}, FLIGHTMASTER)
+		ns.RegisterPoints(78, { -- Un'Goro Crater
+			[44004020] = {note="{npc:39175}"}, -- Flizzy Coilspanner
+			[45200580] = {note="{npc:10583}"}, -- Gryfe
+		}, FLIGHTMASTER)
+		ns.RegisterPoints(81, { -- Silithus
+			[48803660] = {note="{npc:15178}"}, -- Runk Windtamer
+		}, FLIGHTMASTER)
+		ns.RegisterPoints(201, { -- Kelp'thar Forest
+			[49208780] = {note="{npc:43216}"}, -- Swift Seahorse
+		}, FM{parent=true})
+		ns.RegisterPoints(204, { -- Abyssal Depths
+			[53805940] = {note="{npc:40873}"}, -- Swift Seahorse
+		}, FM{parent=true})
+		ns.RegisterPoints(205, { -- Shimmering Expanse
+			[50206540] = {note="{npc:43225}, on boat"}, -- Brogdul
+			[50806340] = {note="{npc:40871}"}, -- Swift Seahorse
+			[61002840] = {note="{npc:43220}, on surface"}, -- Briglar
+			-- [49406540] = {note="{npc:43293}"}, -- Swift Seahorse
+		}, FM{parent=true})
+		ns.RegisterPoints(249, { -- Uldum
+			[22206480] = {note="{npc:48273}"}, -- Evax Oilspark
+			[26600820] = {note="{npc:48274}"}, -- Jock Lindsey
+			[56203360] = {note="{npc:48275}"}, -- Kurzel
+		}, FLIGHTMASTER)
+		ns.RegisterPoints(198, { -- Mount Hyjal
+			[19403640] = {note="{npc:41860}"}, -- Elizil Wintermoth
+			[62202140] = {note="{npc:41861}"}, -- Fayran Elthas
+			[71607520] = {note="{npc:43549}"}, -- Althera
+			[41204240] = {note="{npc:43481}"}, -- Dinorae Swiftfeather
+			[41204260] = {note="{npc:50084}"}, -- Dinorae Swiftfeather
+			[19403640] = {note="{npc:53783}"}, -- Elizil Wintermoth
+			[27606340] = {note="{npc:54392}"}, -- Ranela Featherglen
+			[27806340] = {note="{npc:54393}"}, -- Ranela Featherglen
+		}, FLIGHTMASTER)
+		ns.RegisterPoints(241, { -- Twilight Highlands
+			[54004220] = {note="{npc:47156}"}, -- Bramok Gorewing
+			[28402480] = {note="{npc:47121}"}, -- Aquinastrasz
+			[73805280] = {note="{npc:47174}"}, -- Gorthul
+			[75401780] = {note="{npc:47061}"}, -- Harpo Boltknuckle
+			[36803800] = {note="{npc:47133}"}, -- San'shigo
+			[45607620] = {note="{npc:47116}"}, -- Tokrog
+		}, FLIGHTMASTER)
+	end
+end
