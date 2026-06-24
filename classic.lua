@@ -415,6 +415,7 @@ if WOW_PROJECT_ID ~= WOW_PROJECT_MAINLINE then
 		label=MINIMAP_TRACKING_FLIGHTMASTER, -- Flight Master
 		group=TUTORIAL_TITLE35, -- Travel
 		atlas="FlightMaster",
+		minimap=false,
 	}
 	local FLIGHTMASTER = FM{}
 	if faction == "Alliance" then
