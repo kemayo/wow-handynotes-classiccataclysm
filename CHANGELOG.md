@@ -1,5 +1,10 @@
 # Changelog
 
+## Changed in v4
+
+* Updated for 2.5.6
+* Bring in systems improvements from [my Midnight plugin](https://www.curseforge.com/wow/addons/handynotes-midnight-treasures)
+
 ## Changed in v3
 
 * Don't show the flight masters on the minimap, the game already does that.
