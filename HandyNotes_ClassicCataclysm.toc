@@ -1,4 +1,4 @@
-## Interface: 120007, 50504, 30405, 20505, 11508
+## Interface: 120007, 50504, 30405, 20506, 11508
 ## Title: HandyNotes: Classic and Cataclysm
 ## Notes: Where are the hidden treasures in the pre-and-post Cataclysm Classic zones?
 ## Author: Kemayo
