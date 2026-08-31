@@ -1036,3 +1036,11 @@ if WOW_PROJECT_ID ~= WOW_PROJECT_MAINLINE then
 		}, FLIGHTMASTER)
 	end
 end
+
+ns.RegisterPoints(69, { -- Feralas
+	[62402480] = ns.mapLink{scale=1.7, link=235, label="{map:235:Dire Maul}: {map.group:235:Gorodok Commons}"}, -- Dire Maul: Gorodok Commons
+	[60333070] = ns.mapLink{scale=1.7, link=236, label="{map:235:Dire Maul}: {map.group:236:Capital Guardens}"}, -- Dire Maul: Capital Guardens
+	[64843026] = ns.mapLink{scale=1.7, link=239, label="{map:235:Dire Maul}: {map.group:239:Warpwood Quarter}"}, -- Dire Maul: Warpwood Quarter
+	[66773484] = ns.mapLink{scale=1.7, link=239, label="{map:235:Dire Maul}: {map.group:239:Warpwood Quarter}"}, -- Dire Maul: Warpwood Quarter
+	[76443593] = ns.mapLink{scale=1.7, link=239, label="{map:235:Dire Maul}: {map.group:239:Warpwood Quarter}", path={76483589, 76363612, 76283642, 76363672, 76543667, 76733652, 76943647, 77123663, 77073689}}, -- Dire Maul: Warpwood Quarter
+})
