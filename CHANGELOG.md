@@ -1,5 +1,14 @@
 # Changelog
 
+## Changed in v10
+
+* Adjust TOC to work with the Forever beta (NOTE: no *data* adjustments have been made yet)
+* Fix locations for Clutchmother Zavas, Tsu'zee, Lord Hel'nurath
+* On retail: show the Dire Maul entrances
+* Bring in systems improvements from [my Midnight plugin](https://www.curseforge.com/wow/addons/handynotes-midnight-treasures), notably:
+    * Avoid a secret taint issue with the comparison tooltip for a mob with no loot
+    * Cope with INVTYPE_NON_EQUIP_IGNORE gear in tooltips
+
 ## Changed in v9
 
 * Bring in systems improvements from [my Midnight plugin](https://www.curseforge.com/wow/addons/handynotes-midnight-treasures), notably:
