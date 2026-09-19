@@ -1,4 +1,4 @@
-## Interface: 120100, 120007, 50504, 30405, 20506, 11508
+## Interface: 120100,50504, 30405, 20506, 11509, 16001
 ## Title: HandyNotes: Classic and Cataclysm
 ## Notes: Where are the hidden treasures in the pre-and-post Cataclysm Classic zones?
 ## Author: Kemayo
@@ -16,8 +16,8 @@ handler\handler.xml
 
 glue.lua
 
-mainline.lua [AllowLoadGameType mainline, mists]
+mainline.lua [AllowLoadGameType standard, mists]
 
-classic.lua [AllowLoadGameType vanilla, tbc, wrath]
+classic.lua [AllowLoadGameType vanilla, tbc, wrath, camelot]
 # this was the cataclysm prepatch changes after the world was rearranged but before the new zones were available:
 classic_cataclysm.lua [AllowLoadGameType cata]
