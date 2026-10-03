@@ -1,5 +1,14 @@
 # Changelog
 
+## Changed in v11
+
+* Fix the world map button's position when running in Forever
+* Bring in systems improvements from [my Midnight plugin](https://www.curseforge.com/wow/addons/handynotes-midnight-treasures), notably:
+    * Rares dropping mounts, toys or pets could show as less notable than they should
+    * Routes for related points were drawn once per related point
+    * Points did not refresh when an addon restriction lifted
+    * Waypoints for related points could be sorted wrongly or error
+
 ## Changed in v10
 
 * Adjust TOC to work with the Forever beta (NOTE: no *data* adjustments have been made yet)
