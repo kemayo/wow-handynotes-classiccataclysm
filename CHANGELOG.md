@@ -1,5 +1,9 @@
 # Changelog
 
+## Changed in v12
+
+* Fixed some Forever compatibility checks after the project ID changed in the latest build
+
 ## Changed in v11
 
 * Fix the world map button's position when running in Forever
